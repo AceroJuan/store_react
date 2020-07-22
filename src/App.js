@@ -8,6 +8,7 @@ import Details from './Components/Details'
 import Cart from './Components/Cart/Cart'
 import Default from './Components/Default'
 import Modal from './Components/Modal'
+import WineYardList from './Components/WineYardList'
 
 class App extends Component {
   render() {
@@ -15,7 +16,8 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={ProductList} />
+          <Route exact path="/" component={WineYardList} />
+          <Route path="/productList" component={ProductList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

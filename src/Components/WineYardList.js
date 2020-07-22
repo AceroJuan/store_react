@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
-import Product from './Product'
+import WineYard from './WineYard'
 import Title from './Title'
 import { ProductConsumer } from '../context'
 import styled from 'styled-components'
 
-export default class ProductList extends Component {
+export default class WineYardList extends Component {
   render() {
     return (
       <React.Fragment>
         <ProductsWrapper>
           <div className="py-5 ">
             <div className="container">
-              <Title name="our" title="products" />
+              <Title title="bodegas" />
               <div className="row">
                 <ProductConsumer>
                   {value =>{
                     return value.products.map( product => {
-                      return <Product key={product.id} product={product} />;
-                    })
+                      if (product.id === 1)
+                        return <WineYard key={product.id} product={product} />
+                      }
+                    )
                   }}
                 </ProductConsumer>
               </div>

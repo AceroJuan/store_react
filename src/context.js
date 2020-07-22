@@ -81,8 +81,8 @@ class ProductProvider extends Component {
       () => {
         return{cart:[...tempCart]};
       },
-       () =>{
-         this.addTotals();
+      () =>{
+        this.addTotals();
         }
     );
 
@@ -105,8 +105,8 @@ class ProductProvider extends Component {
         () => {
           return{cart:[...tempCart]};
         },
-         () =>{
-           this.addTotals();
+        () =>{
+          this.addTotals();
           }
       );
 
